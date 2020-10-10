@@ -5,10 +5,10 @@ router.route('/send').post((req,res)=>{
 
 
 
-    const accountSid='ACb4e624ea6813f399f92701a369d04439';
+    const accountSid='';
     
     
-    const authToken='c732ab5e4d6375bafd1d7925619578d0';
+    const authToken='';
     console.log(accountSid)
     
     const client = require('twilio')(accountSid, authToken);
@@ -17,7 +17,7 @@ router.route('/send').post((req,res)=>{
     
     client.messages.create({
         body:body,
-        from:'+19524795030',
+        from:'',
         to:to,
     })
     
